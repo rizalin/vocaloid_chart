@@ -1,0 +1,133 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["selectRelationCount"]
+}
+
+model User {
+  id Int @unique
+  artistType String
+  defaultName String
+  picture String?
+  name String?
+  isActive Boolean? @default(true)
+  createdDate DateTime
+  createdAt DateTime? @default(now())
+  deletedAt DateTime? 
+  youtubeChannel YoutubeChannel[]
+  otherLink OtherLink?
+}
+
+model OtherLink {
+  id String @id @default(cuid())
+  user User? @relation(fields: [userId], references: [id])
+  userId Int
+  spotify SpotifyLink?
+  nicoNico NndLink?
+  createdAt DateTime? @default(now())
+  deletedAt DateTime? 
+}
+
+
+model YoutubeChannel {
+  id String @id @default(cuid())
+  user User @relation(fields: [userId], references: [id])
+  name String?
+  channelName String?
+  vocaDbDescription String
+  youtubeId String @unique
+  channelType YoutubeLinkType
+  youtubeLink String @unique
+  userId Int
+  videos Video[]
+  included Boolean @default(false)
+  createdAt DateTime? @default(now())
+  insertAt DateTime? @default(now())
+  deletedAt DateTime? 
+}
+
+model Video {
+  id String @id @default(cuid())
+  videoYoutubeId String @unique
+  title String?
+  customArtist String?
+  originalTitle String
+  uploadDate DateTime
+  show Boolean @default(true)
+  picture String
+  channel YoutubeChannel? @relation(fields: [channelId], references: [id])
+  channelId String
+  voiceBank String?
+  statistic Statistic[]
+  performance Performance[]
+  createdAt DateTime? @default(now())
+  deletedAt DateTime? 
+}
+
+model VoiceBank {
+  id String @id @default(cuid())
+  name String
+  type String?
+  createdAt DateTime? @default(now())
+  deletedAt DateTime? 
+}
+
+model Statistic {
+  id String @id @default(cuid())
+  video Video? @relation(fields: [videoId], references: [id])
+  videoId String?
+  week Int
+  views Int
+  comments Int
+  likes Int
+  createdAt DateTime? @default(now())
+  deletedAt DateTime? 
+}
+
+model Performance {
+  id String @id @default(cuid())
+  position Int
+  score Int
+  viewModifier Decimal
+  likeModifier Decimal
+  commentModifier Decimal
+  video Video @relation(fields: [videoId], references: [id])
+  videoId String
+  createdAt DateTime? @default(now())
+  deletedAt DateTime? 
+}
+
+model SpotifyLink {
+  id String @id @default(cuid())
+  name String
+  url String
+  userId Int
+  link OtherLink? @relation(fields: [linkId], references: [id])
+  linkId String 
+  createdAt DateTime? @default(now())
+  deletedAt DateTime? 
+}
+
+model NndLink {
+  id String @id @default(cuid())
+  name String
+  url String
+  userId Int
+  link OtherLink? @relation(fields: [linkId], references: [id])
+  linkId String 
+  createdAt DateTime? @default(now())
+  deletedAt DateTime? 
+}
+
+
+enum YoutubeLinkType {
+  CUSTOM_LINK
+  ORIGINAL_ID
+}
