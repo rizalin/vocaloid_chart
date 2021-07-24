@@ -1,73 +1,31 @@
 import Head from "next/head"
-import { useEffect, useState } from "react"
-import { Button, Container, Box } from "@chakra-ui/react"
-import { useRouter } from "next/router"
+import { Button, Container } from "@chakra-ui/react"
 
 import InitService from "../lib/services/init.service"
 import PrismaService from "../lib/services/prisma.service"
-import { Statistic, YoutubeChannel } from "@prisma/client"
 import { chunk } from "../lib/helper/lodash-alt"
-import { OtherUsers } from "../../database/other_user"
-import { CHANNEL_IDS } from "../../database/channel_ids"
-import HelperService from "../lib/services/helper.service"
 import exportFromJSON from "export-from-json"
-import { fetcher } from "../lib/helper/async"
-import { CHANNEL_USERS } from "../../database/channel_users"
 import ChartHelper from "../lib/helper/chart"
-import { STATISTIC_WEEK_0 } from "../../database/statistic_week_0"
+import { STATISTIC_WEEK_3 } from "../../database/statistic/statistic_week_3"
+import { NEW_JUL_17_CHART } from "../database/jul_17"
 
 // TODO
 // Add IA official
 
 export default function Home(props) {
-  const [videos, setVideos] = useState([])
-  const [channels, setChannels] = useState([])
-  const [statistics, setStatistics] = useState([])
-  const [chart, setChart] = useState([])
-
   const init = new InitService()
   const prisma = new PrismaService()
   const helper = new ChartHelper()
 
-  useEffect(() => {
-    const getChannels = async () => {
+  const generateVideos = async () => {
+    try {
       const res = await prisma.getChannels()
 
       if (res.isSuccess) {
         const data = res.getValue()
 
-        setChannels(data)
+        await init.initChannelVideos(data)
       }
-    }
-
-    const getVideos = async () => {
-      const res = await prisma.getVideos()
-
-      if (res.isSuccess) {
-        const data = res.getValue()
-
-        setVideos(data)
-      }
-    }
-
-    const getStatistic = async () => {
-      const res = await prisma.getStatistic()
-
-      if (res.isSuccess) {
-        const data = res.getValue()
-        console.log(data)
-        setStatistics(data)
-      }
-    }
-
-    getChannels()
-    // getVideos()
-    // getStatistic()
-  }, [])
-
-  const generateVideos = async () => {
-    try {
-      await init.initChannelVideos(channels)
     } catch (error) {
       console.log(error)
     }
@@ -75,38 +33,58 @@ export default function Home(props) {
 
   const generateStatistic = async () => {
     try {
-      console.log(videos)
-      const chunked = chunk(videos, 50)
+      const res = await prisma.getVideos()
 
-      // const res = await init.initStatistic(chunked[0], 0)
+      if (res.isSuccess) {
+        const data = res.getValue()
 
-      // console.log(res.isSuccess)
+        const chunked = chunk(data, 50)
 
-      const resAll = chunked.map((item) => {
-        return init.initStatistic(item, 1)
-      })
+        // const res = await init.initStatistic(chunked[0], 0)
 
-      await Promise.all(resAll)
+        // console.log(res.isSuccess)
+
+        let index = 0
+
+        while (index < chunked.length) {
+          await init.initStatistic(chunked[index], 2)
+          index++
+        }
+      }
     } catch (error) {
       console.log(error)
     }
   }
 
-  const generateChart = () => {
-    const array = []
+  const generateChart = async () => {
+    const res = await prisma.getStatistic()
 
-    for (let index = 0; index < statistics.length; index++) {
-      const element = statistics[index]
+    if (res.isSuccess) {
+      const data = res.getValue()
+      console.log(data)
+      const array = []
 
-      const obj = helper.chartMaker(element, STATISTIC_WEEK_0, element.video)
-      array.push(obj)
+      for (let index = 0; index < data.length; index++) {
+        const element = data[index]
+
+        const obj = helper.chartMaker(element, STATISTIC_WEEK_3, element.video)
+        array.push(obj)
+      }
+
+      exportFromJSON({ data: array, fileName: "chart_jul_24", exportType: "csv" })
+      exportFromJSON({ data: array, fileName: "chart_jul_24", exportType: "json" })
+
+      return array
+    } else {
+      console.log("object")
     }
+  }
 
-    setChart(array)
-    exportFromJSON({ data: array, fileName: "chart_jul_3", exportType: "csv" })
-    exportFromJSON({ data: array, fileName: "chart_jul_3", exportType: "json" })
-
-    return array
+  const openAllVideo = () => {
+    for (const video of NEW_JUL_17_CHART) {
+      window.open(`https://www.youtube.com/watch?v=${video.id}`, "_blank")
+      console.log(video.id)
+    }
   }
 
   return (
@@ -126,6 +104,9 @@ export default function Home(props) {
         </Button>
         <Button colorScheme="teal" onClick={generateChart}>
           Generate Chart
+        </Button>
+        <Button colorScheme="teal" onClick={openAllVideo}>
+          Open all video
         </Button>
       </Container>
 

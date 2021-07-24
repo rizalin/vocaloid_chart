@@ -6,6 +6,8 @@ import { NEW_JUL_3_CHART } from "../database/jul_3"
 import PrismaService from "../lib/services/prisma.service"
 import { Chart } from "../types/ui"
 import { ChartComponent } from "../components/chart-component"
+import { NEW_JUL_10_CHART } from "../database/jul_10"
+import { NEW_JUL_17_CHART } from "../database/jul_17"
 
 // TODO
 // Add IA official
@@ -22,8 +24,8 @@ export default function Home(props) {
       const array: Chart[] = []
       const links = []
 
-      for (let index = 0; index < NEW_JUL_3_CHART.length; index++) {
-        const element = NEW_JUL_3_CHART[index]
+      for (let index = 0; index < NEW_JUL_17_CHART.length; index++) {
+        const element = NEW_JUL_17_CHART[index]
 
         const res = await prisma.getVideo(element.id)
 
@@ -63,13 +65,13 @@ export default function Home(props) {
           <div className="home-chart__header">
             <img src="/hiiiru.jpg" alt="" />
             <div className="home-chart__header__title">
-              <h1>Vocaloid Chart</h1>
+              <h1>Vocaloid/UTAU/Synth Chart</h1>
               <h3>NEW Original Edition</h3>
-              <h5>Per Jul 3, 2021</h5>
+              <h5>Per Jul 17, 2021</h5>
             </div>
             <div className="home-chart__header__week">
               <div className="home-chart__header__week__title">Week</div>
-              <div className="home-chart__header__week__number">1</div>
+              <div className="home-chart__header__week__number">3</div>
               <div className="home-chart__header__week__year">2021</div>
             </div>
           </div>

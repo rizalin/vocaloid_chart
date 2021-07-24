@@ -39,13 +39,30 @@ export default class ChartHelper {
       const now = dayjs(new Date())
       const uploadMoment = dayjs(publishedAt)
       const diff = now.diff(uploadMoment, "days")
-      if (diff > 14) {
-        return 1.0
-      } else if (diff < 1) {
-        return 1.4
-      } else {
-        const modifier = (1.4 - diff / 40).toFixed(2)
-        return parseFloat(modifier)
+      const month = now.diff(uploadMoment, "months")
+
+      switch (true) {
+        case month < 1 && diff >= 14: {
+          return 1.0
+        }
+        case month < 1 && diff < 1: {
+          return 1.4
+        }
+
+        case month > 1: {
+          const deduction = month * 0.1
+
+          if (deduction > 0.1 && deduction < 1) {
+            return 1 - deduction
+          } else {
+            return 0.1
+          }
+        }
+
+        default: {
+          const modifier = (1.4 - diff / 40).toFixed(2)
+          return parseFloat(modifier)
+        }
       }
     }
 
@@ -66,7 +83,9 @@ export default class ChartHelper {
       score: views ? Math.floor(viewPoints + likePoints()) : 0,
       viewModifier: modifierC(),
       commentModifier: modifierA(),
-      likeModifier: modifierB()
+      likeModifier: modifierB(),
+      viewPoints,
+      likePoints: likePoints()
     }
   }
 
@@ -78,7 +97,7 @@ export default class ChartHelper {
       const thisWeekLike = thisWeek.likes - lastWeekObj.likes
       const thisWeekComment = thisWeek.comments - lastWeekObj.comments
 
-      const { score, commentModifier, likeModifier, viewModifier } = this.scoreMultiplier(
+      const { score, likeModifier, viewModifier, likePoints, viewPoints } = this.scoreMultiplier(
         {
           ...lastWeekObj,
           comments: thisWeekComment,
@@ -99,28 +118,33 @@ export default class ChartHelper {
         likeCount: thisWeekLike ?? 0,
         commentCount: thisWeekComment ?? 0,
         score,
-        modifierA: commentModifier,
-        modifierB: likeModifier,
-        modifierC: viewModifier
+        likeModifier,
+        viewModifier,
+        likePoints,
+        viewPoints
       }
     } else {
-      const { score, commentModifier, likeModifier, viewModifier } = this.scoreMultiplier(
-        thisWeek,
-        videoInfo.uploadDate
-      )
+      const { score, commentModifier, likeModifier, viewModifier, likePoints, viewPoints } =
+        this.scoreMultiplier(thisWeek, videoInfo.uploadDate)
+
+      const now = dayjs(new Date())
+      const uploadMoment = dayjs(videoInfo.uploadDate)
 
       return {
-        ...thisWeek,
         id: videoInfo.videoYoutubeId,
-        isNew: true,
+        isNew: !(now.diff(uploadMoment, "days") > 7),
         channelName: videoInfo.customArtist,
         publishedAt: videoInfo.uploadDate,
         videoTitle: videoInfo?.originalTitle,
         thumbnail: videoInfo?.picture,
-        score,
-        modifierA: commentModifier,
-        modifierB: likeModifier,
-        modifierC: viewModifier
+        score: now.diff(uploadMoment, "days") > 7 ? 0 : score,
+        likeModifier,
+        viewModifier,
+        likePoints,
+        viewPoints,
+        viewCount: thisWeek.views,
+        likeCount: thisWeek.likes ?? 0,
+        commentCount: thisWeek.comments ?? 0
       }
     }
   }

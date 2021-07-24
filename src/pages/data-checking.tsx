@@ -3,23 +3,28 @@ import { Button, Container } from "@chakra-ui/react"
 import exportFromJSON from "export-from-json"
 import Head from "next/head"
 import React, { useEffect, useState } from "react"
-import { RAW_NEW_JUL_3_CHART } from "../database/jul_3"
+import { RAW_JUL_24_CHART } from "../database/jul_24"
+import PrismaService from "../lib/services/prisma.service"
 import { RawChart } from "../types/ui"
 
 const DataChecking = (props) => {
   const [videos, setVideos] = useState<RawChart[]>([])
 
+  const prisma = new PrismaService()
+
   useEffect(() => {
-    setVideos(RAW_NEW_JUL_3_CHART)
+    setVideos(RAW_JUL_24_CHART)
   }, [])
 
   const convertToJson = () => {
     exportFromJSON({ data: videos, fileName: "all_chart_jul_3", exportType: "json" })
   }
 
-  const removeVideo = (index: number) => () => {
+  const removeVideo = (index: number, id: string) => async () => {
     const video = [...videos]
     video.splice(index, 1)
+
+    await prisma.ignoreVideo(id)
 
     setVideos(video)
   }
@@ -50,12 +55,13 @@ const DataChecking = (props) => {
               <div className="raw-chart__card__body__artist">{item.channelName}</div>
             </div>
             <div className="raw-chart__card__handler">
-              <Button onClick={removeVideo(i)}>
+              <Button onClick={removeVideo(i, item.id)}>
                 <DeleteIcon />
               </Button>
               <Button onClick={goToVideo(item.id)}>
                 <LinkIcon />
               </Button>
+              <div>{item.id}</div>
             </div>
           </div>
         ))}

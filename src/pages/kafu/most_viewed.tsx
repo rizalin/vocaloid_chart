@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import PrismaService from "../../lib/services/prisma.service"
 import { Chart } from "../../types/ui"
 import { ChartComponent } from "../../components/chart-component"
-import { KAFU_JUL_07 } from "../../database/kafu/july_07"
+import { KAFU_JUL_21 } from "../../database/kafu/july_21"
 
 // TODO
 // Add IA official
@@ -20,8 +20,8 @@ export default function Home(props) {
       const array: Chart[] = []
       const links = []
 
-      for (let index = KAFU_JUL_07.length - 1; index >= 0; index--) {
-        const element = KAFU_JUL_07[index]
+      for (let index = KAFU_JUL_21.length - 1; index >= 0; index--) {
+        const element = KAFU_JUL_21[index]
 
         const res = await prisma.getVideo(element.id)
         if (res.isSuccess) {
@@ -33,7 +33,7 @@ export default function Home(props) {
               ...data,
               isNew: element.isNew,
               bestPosition: index,
-              lastWeek: element.lastWeek ?? KAFU_JUL_07.length - index,
+              lastWeek: element.lastWeek ?? KAFU_JUL_21.length - index,
               weeksInChart: 1,
               score: 0,
               views: element.views
@@ -64,11 +64,11 @@ export default function Home(props) {
             <div className="home-chart__header__title">
               <h1>KAFU Chart</h1>
               <h3>Most Viewed Edition</h3>
-              <h5>Per Jul 7, 2021</h5>
+              <h5>Per Jul 21, 2021</h5>
             </div>
             <div className="home-chart__header__week">
               <div className="home-chart__header__week__title">Week</div>
-              <div className="home-chart__header__week__number">2</div>
+              <div className="home-chart__header__week__number">4</div>
               <div className="home-chart__header__week__year">2021</div>
             </div>
           </div>

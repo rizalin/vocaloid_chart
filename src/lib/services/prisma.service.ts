@@ -90,4 +90,18 @@ export default class PrismaService {
       return Result.fail<Video>()
     }
   }
+
+  async ignoreVideo(id: string) {
+    try {
+      const res = await fetcher(`/api/video`, { method: "put", body: { id } })
+
+      if (res.ok) {
+        return Result.ok()
+      } else {
+        return Result.fail()
+      }
+    } catch (error) {
+      return Result.fail()
+    }
+  }
 }

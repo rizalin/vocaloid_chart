@@ -94,6 +94,8 @@ model Statistic {
 model Performance {
   id String @id @default(cuid())
   position Int
+  week Int
+  month String
   score Int
   viewModifier Decimal
   likeModifier Decimal

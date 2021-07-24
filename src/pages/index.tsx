@@ -7,6 +7,7 @@ import PrismaService from "../lib/services/prisma.service"
 import Image from "next/image"
 import { Chart } from "../types/ui"
 import { ChartComponent } from "../components/chart-component"
+import { ALL_CHART_JUL_24 } from "../database/jul_24"
 
 // TODO
 // Add IA official
@@ -23,24 +24,23 @@ export default function Home(props) {
       const array: Chart[] = []
       const links = []
 
-      for (let index = 0; index < ALL_CHART_JUL_3.length; index++) {
-        const element = ALL_CHART_JUL_3[index]
+      for (let index = 0; index < ALL_CHART_JUL_24.length; index++) {
+        const element = ALL_CHART_JUL_24[index]
 
         const res = await prisma.getVideo(element.id)
 
         const data = res.getValue()
 
-        // @ts-ignore
         array.push({
           ...data,
-          isNew: true,
-          bestPosition: index + 1,
-          lastWeek: 0,
-          weeksInChart: 1,
+          isNew: element.isNew,
+          bestPosition: element.bestPosition,
+          lastWeek: element.lastWeek,
+          weeksInChart: element.weeksInChart,
           score: element.score ?? 0
         })
 
-        links.push(`https://www.youtube.com/watch?v=${data.videoYoutubeId}`)
+        // links.push(`https://www.youtube.com/watch?v=${data.videoYoutubeId}`)
       }
 
       setVideos(array)
@@ -66,13 +66,13 @@ export default function Home(props) {
           <div className="home-chart__header">
             <img src="/hiiiru.jpg" alt="" />
             <div className="home-chart__header__title">
-              <h1>Vocaloid Chart</h1>
+              <h1>Vocaloid/UTAU/Synth Chart</h1>
               <h3>Original Edition</h3>
-              <h5>Per Jul 3, 2021</h5>
+              <h5>Per Jul 24, 2021</h5>
             </div>
             <div className="home-chart__header__week">
               <div className="home-chart__header__week__title">Week</div>
-              <div className="home-chart__header__week__number">1</div>
+              <div className="home-chart__header__week__number">4</div>
               <div className="home-chart__header__week__year">2021</div>
             </div>
           </div>

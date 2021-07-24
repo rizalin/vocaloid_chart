@@ -20,6 +20,16 @@ function rankCalculator({ index, indexAdd, video }: RankCalculatorProps): Rank {
         rankProgress: "NEW",
         highestRank: currentRank
       }
+    case lastWeek > 20 && bestPosition > 1:
+      return {
+        rankProgress: "RE-ENTRY",
+        highestRank: bestPosition
+      }
+    case lastWeek > 20:
+      return {
+        rankProgress: "CHART DEBUT",
+        highestRank: currentRank
+      }
     case bestPosition > 0:
       return {
         rankProgress: progress === 0 ? "=" : lastWeek - currentRank,
@@ -47,6 +57,10 @@ function ProgressIndicator({ rankProgress }) {
     case rankProgress === "NEW":
     case !rankProgress:
       return <>NEW</>
+    case rankProgress === "RE-ENTRY":
+      return <>RE-ENTRY</>
+    case rankProgress === "CHART DEBUT":
+      return <>CHART DEBUT</>
     case rankProgress === "=":
       return <>=</>
     default:

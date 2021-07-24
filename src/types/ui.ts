@@ -9,6 +9,9 @@ export interface RawChart {
   thumbnail: string
   score: number
   views?: number
+  lastWeek?: number
+  bestPosition?: number
+  weeksInChart?: number
 }
 
 export interface RawChartId {

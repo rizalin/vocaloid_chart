@@ -130,12 +130,18 @@ export default class InitService {
         body: videos
       })
 
+      const findId = (id) => {
+        const find = videos.find((item) => item.videoYoutubeId === id)
+
+        return find.id
+      }
+
       if (res.ok) {
         const data = res.data as YoutubeVideoResponse[]
 
-        const array = data.map((item, i) => {
+        const array = data.map((item) => {
           return {
-            videoId: videos[i].id,
+            videoId: findId(item.id),
             week,
             views: item.statistics.viewCount ? parseInt(item.statistics.viewCount) : 0,
             comments: item.statistics.commentCount ? parseInt(item.statistics.commentCount) : 0,
