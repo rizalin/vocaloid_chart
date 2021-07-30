@@ -110,7 +110,7 @@ export const ChartComponent: FC<ChartComponentProps> = ({
           <ProgressIndicator rankProgress={rankProgress} />
         </div>
         <div className="chart-progress">
-          {isKafu ? "" : <div className="info">Score : {video.score}</div>}
+          {isKafu ? "" : <div className="info">Score : {Intl.NumberFormat("en-EN").format(video.score)}</div>}
           {type === "all" ? (
             <div className="info">Weeks in chart : {video.weeksInChart ?? 1}</div>
           ) : (

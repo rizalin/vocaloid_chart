@@ -66,7 +66,7 @@ model Video {
   channelId String
   voiceBank String?
   statistic Statistic[]
-  performance Performance[]
+  performance Performance?
   createdAt DateTime? @default(now())
   deletedAt DateTime? 
 }
@@ -93,17 +93,27 @@ model Statistic {
 
 model Performance {
   id String @id @default(cuid())
-  position Int
+  bestPosition Int
+  weeksInChart Int
+  video Video @relation(fields: [videoId], references: [id])
+  weekPerformances WeekPerformance[]
+  videoId String
+  createdAt DateTime? @default(now())
+  deletedAt DateTime? 
+}
+
+model WeekPerformance {
+  id String @id @default(cuid())
+  performance Performance @relation(fields: [performanceId], references: [id])
+  performanceId String
   week Int
   month String
   score Int
   viewModifier Decimal
+  viewPoint Int
   likeModifier Decimal
+  likePoint Int
   commentModifier Decimal
-  video Video @relation(fields: [videoId], references: [id])
-  videoId String
-  createdAt DateTime? @default(now())
-  deletedAt DateTime? 
 }
 
 model SpotifyLink {

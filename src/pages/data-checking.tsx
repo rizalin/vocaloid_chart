@@ -3,7 +3,7 @@ import { Button, Container } from "@chakra-ui/react"
 import exportFromJSON from "export-from-json"
 import Head from "next/head"
 import React, { useEffect, useState } from "react"
-import { RAW_JUL_24_CHART } from "../database/jul_24"
+import { RAW_NEW_CHART_JUL_24 } from "../database/jul_24"
 import PrismaService from "../lib/services/prisma.service"
 import { RawChart } from "../types/ui"
 
@@ -13,7 +13,7 @@ const DataChecking = (props) => {
   const prisma = new PrismaService()
 
   useEffect(() => {
-    setVideos(RAW_JUL_24_CHART)
+    setVideos(RAW_NEW_CHART_JUL_24)
   }, [])
 
   const convertToJson = () => {

@@ -1,13 +1,10 @@
 import { Box, Container } from "@chakra-ui/react"
-import { Video } from "@prisma/client"
 import Head from "next/head"
 import { useEffect, useState } from "react"
-import { NEW_JUL_3_CHART } from "../database/jul_3"
 import PrismaService from "../lib/services/prisma.service"
 import { Chart } from "../types/ui"
 import { ChartComponent } from "../components/chart-component"
-import { NEW_JUL_10_CHART } from "../database/jul_10"
-import { NEW_JUL_17_CHART } from "../database/jul_17"
+import { NEW_CHART_JUL_24 } from "../database/jul_24"
 
 // TODO
 // Add IA official
@@ -24,8 +21,8 @@ export default function Home(props) {
       const array: Chart[] = []
       const links = []
 
-      for (let index = 0; index < NEW_JUL_17_CHART.length; index++) {
-        const element = NEW_JUL_17_CHART[index]
+      for (let index = 0; index < NEW_CHART_JUL_24.length; index++) {
+        const element = NEW_CHART_JUL_24[index]
 
         const res = await prisma.getVideo(element.id)
 
@@ -39,7 +36,7 @@ export default function Home(props) {
           lastWeek: 0,
           weeksInChart: 1,
           score: element.score ?? 0,
-          views: data.statistic[0].views
+          views: element.views
         })
         links.push(`https://www.youtube.com/watch?v=${data.videoYoutubeId}`)
       }
@@ -67,11 +64,11 @@ export default function Home(props) {
             <div className="home-chart__header__title">
               <h1>Vocaloid/UTAU/Synth Chart</h1>
               <h3>NEW Original Edition</h3>
-              <h5>Per Jul 17, 2021</h5>
+              <h5>Per Jul 24, 2021</h5>
             </div>
             <div className="home-chart__header__week">
               <div className="home-chart__header__week__title">Week</div>
-              <div className="home-chart__header__week__number">3</div>
+              <div className="home-chart__header__week__number">4</div>
               <div className="home-chart__header__week__year">2021</div>
             </div>
           </div>

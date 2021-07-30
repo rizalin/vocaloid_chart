@@ -606,3 +606,424 @@ export const ALL_CHART_JUL_24: RawChart[] = [
     score: 86068
   }
 ]
+
+export const RAW_NEW_CHART_JUL_24: RawChart[] = [
+  {
+    "id": "wpVcrP18y6k",
+    "isNew": true,
+    "channelName": "HoneyWorks OFFICIAL",
+    "publishedAt": "2021-07-16T11:25:53.000Z",
+    "videoTitle": "【MV】ホントノワタシ／mona（CV：夏川椎菜）【HoneyWorks】",
+    "thumbnail": "https://i.ytimg.com/vi/wpVcrP18y6k/hqdefault.jpg",
+    "score": 1305725
+  },
+  {
+    "id": "Rcc_BreWEMI",
+    "isNew": true,
+    "channelName": "ポリスピカデリー / Police Piccadilly",
+    "publishedAt": "2021-07-17T16:36:41.000Z",
+    "videoTitle": "Beat Eater - ポリスピカデリー feat. 初音ミク / Police Piccadilly",
+    "thumbnail": "https://i.ytimg.com/vi/Rcc_BreWEMI/maxresdefault.jpg",
+    "score": 769341
+  },
+  {
+    "id": "GXT88-9w2aI",
+    "isNew": true,
+    "channelName": "HatsuneMiku",
+    "publishedAt": "2021-07-19T05:15:00.000Z",
+    "videoTitle": "【HATSUNE MIKU Digital Stars 2021】 sweety glitch / gaburyu & nyankobrq feat. 初音ミク 【MV】",
+    "thumbnail": "https://i.ytimg.com/vi/GXT88-9w2aI/maxresdefault.jpg",
+    "score": 641451
+  },
+  {
+    "id": "In8eI22f9ZQ",
+    "isNew": true,
+    "channelName": "カンザキイオリ",
+    "publishedAt": "2021-07-17T07:57:40.000Z",
+    "videoTitle": "大人 / カンザキイオリ",
+    "thumbnail": "https://i.ytimg.com/vi/In8eI22f9ZQ/maxresdefault.jpg",
+    "score": 533770
+  },
+  {
+    "id": "4aRpLEuP4XU",
+    "isNew": true,
+    "channelName": "あまね",
+    "publishedAt": "2021-07-17T09:02:36.000Z",
+    "videoTitle": "涼しいような冷たいような曲",
+    "thumbnail": "https://i.ytimg.com/vi/4aRpLEuP4XU/hqdefault.jpg",
+    "score": 447252
+  },
+  {
+    "id": "k6tdaJds78o",
+    "isNew": true,
+    "channelName": "ヤマモトガクーPeg",
+    "publishedAt": "2021-07-16T14:09:24.000Z",
+    "videoTitle": "あわよくばきみの眷属になりたいな(remake)/Peg",
+    "thumbnail": "https://i.ytimg.com/vi/k6tdaJds78o/maxresdefault.jpg",
+    "score": 429322
+  },
+  {
+    "id": "r2dc0wQbEtg",
+    "isNew": true,
+    "channelName": "SLAVE.V-V-R",
+    "publishedAt": "2021-07-24T01:00:12.000Z",
+    "videoTitle": "『どっくっん。』",
+    "thumbnail": "https://i.ytimg.com/vi/r2dc0wQbEtg/maxresdefault.jpg",
+    "score": 299513
+  },
+  {
+    "id": "8wRmwgsTh-0",
+    "isNew": true,
+    "channelName": "あまね",
+    "publishedAt": "2021-07-20T02:35:30.000Z",
+    "videoTitle": "【ｲｷｽｷﾞｨｯｯ!!】コード進行紹介",
+    "thumbnail": "https://i.ytimg.com/vi/8wRmwgsTh-0/maxresdefault.jpg",
+    "score": 230938
+  },
+  {
+    "id": "1r2ULjUYwvQ",
+    "isNew": true,
+    "channelName": "あまね",
+    "publishedAt": "2021-07-21T13:26:24.000Z",
+    "videoTitle": "友達が作った神曲さらにめちゃくちゃかっこよくしてみた",
+    "thumbnail": "https://i.ytimg.com/vi/1r2ULjUYwvQ/maxresdefault.jpg",
+    "score": 217059
+  },
+  {
+    "id": "DoqIA_DcBdk",
+    "isNew": true,
+    "channelName": "カンザキイオリ",
+    "publishedAt": "2021-07-17T05:14:06.000Z",
+    "videoTitle": "カンザキイオリ第一回公演「不器用な男」",
+    "thumbnail": "https://i.ytimg.com/vi/DoqIA_DcBdk/maxresdefault.jpg",
+    "score": 207600
+  },
+  {
+    "id": "3XNMaLZUEAw",
+    "isNew": true,
+    "channelName": "SLAVE.V-V-R",
+    "publishedAt": "2021-07-22T06:35:23.000Z",
+    "videoTitle": "7/24（土曜）SLAVE.V-V-R、引退！（予告編/本編公開済み）",
+    "thumbnail": "https://i.ytimg.com/vi/3XNMaLZUEAw/hqdefault.jpg",
+    "score": 190984
+  },
+  {
+    "id": "dXJvqzDVxQk",
+    "isNew": true,
+    "channelName": "ヤマモトガクーPeg",
+    "publishedAt": "2021-07-22T15:19:12.000Z",
+    "videoTitle": "ヤマモトガク「極夜」MV",
+    "thumbnail": "https://i.ytimg.com/vi/dXJvqzDVxQk/sddefault.jpg",
+    "score": 178659
+  },
+  {
+    "id": "qYxpPyxlWiQ",
+    "isNew": true,
+    "channelName": "Giga",
+    "publishedAt": "2021-07-21T07:52:58.000Z",
+    "videoTitle": "Giga - 'G4L' MV Teaser",
+    "thumbnail": "https://i.ytimg.com/vi/qYxpPyxlWiQ/maxresdefault.jpg",
+    "score": 100242
+  },
+  {
+    "id": "HbqZ_X-TKwI",
+    "isNew": true,
+    "channelName": "粗品 Official Channel",
+    "publishedAt": "2021-07-23T13:48:09.000Z",
+    "videoTitle": "低評価にキレる粗品【粗品切り抜き】 #shorts",
+    "thumbnail": "https://i.ytimg.com/vi/HbqZ_X-TKwI/sddefault.jpg",
+    "score": 93313
+  },
+  {
+    "id": "nW3Qh_ORfzk",
+    "isNew": true,
+    "channelName": "40meterP",
+    "publishedAt": "2021-07-17T13:33:43.000Z",
+    "videoTitle": "初音ミク＆GUMI「雨は二度上がる」MV",
+    "thumbnail": "https://i.ytimg.com/vi/nW3Qh_ORfzk/hqdefault.jpg",
+    "score": 90515
+  },
+  {
+    "id": "pzjK2kB-LxM",
+    "isNew": true,
+    "channelName": "粗品 Official Channel",
+    "publishedAt": "2021-07-23T11:48:13.000Z",
+    "videoTitle": "初めて生配信でスーパーチャットを貰った粗品の反応【粗品切り抜き】 #shorts",
+    "thumbnail": "https://i.ytimg.com/vi/pzjK2kB-LxM/maxresdefault.jpg",
+    "score": 86599
+  },
+  {
+    "id": "JPaE8sCGfiU",
+    "isNew": true,
+    "channelName": "マイキ",
+    "publishedAt": "2021-07-23T14:00:10.000Z",
+    "videoTitle": "【ただいま!!】プロドラマーなら初めて聴く曲でも即興で叩けるの？【うまぴょい伝説】【ウマ娘】",
+    "thumbnail": "https://i.ytimg.com/vi/JPaE8sCGfiU/maxresdefault.jpg",
+    "score": 82507
+  },
+  {
+    "id": "d2p2TarB3wI",
+    "isNew": true,
+    "channelName": "HatsuneMiku",
+    "publishedAt": "2021-07-19T06:29:19.000Z",
+    "videoTitle": "【初音ミク】アート展「初音ミク・クロニクル」/関係者インタビュー②",
+    "thumbnail": "https://i.ytimg.com/vi/d2p2TarB3wI/hqdefault.jpg",
+    "score": 79297
+  },
+  {
+    "id": "QdSJpU7TA3M",
+    "isNew": true,
+    "channelName": "りえたくchannel official",
+    "publishedAt": "2021-07-22T23:00:20.000Z",
+    "videoTitle": "【男同士】彼氏に寝起きいきなりドッキリ",
+    "thumbnail": "https://i.ytimg.com/vi/QdSJpU7TA3M/maxresdefault.jpg",
+    "score": 70078
+  },
+  {
+    "id": "y1K8OBOU5kM",
+    "isNew": true,
+    "channelName": "いよわ/ iyowa",
+    "publishedAt": "2021-07-22T18:24:14.000Z",
+    "videoTitle": "パインドロップ / いよわ×三月のパンタシア feat.初音ミク（Pinedrop / Iyowa × sangatsu no phantasia feat. Hatsune Miku）",
+    "thumbnail": "https://i.ytimg.com/vi/y1K8OBOU5kM/maxresdefault.jpg",
+    "score": 69765
+  },
+  {
+    "id": "d3ZOnM1I17s",
+    "isNew": true,
+    "channelName": "wotaku",
+    "publishedAt": "2021-07-20T09:39:32.000Z",
+    "videoTitle": "リテラシー(Literacy) / wotaku feat. KAITO",
+    "thumbnail": "https://i.ytimg.com/vi/d3ZOnM1I17s/maxresdefault.jpg",
+    "score": 68559
+  },
+  {
+    "id": "FCj3rAeDfL0",
+    "isNew": true,
+    "channelName": "ケダルイ / Kedarui",
+    "publishedAt": "2021-07-20T10:33:56.000Z",
+    "videoTitle": "ファムファタル / flower [Official]",
+    "thumbnail": "https://i.ytimg.com/vi/FCj3rAeDfL0/hqdefault.jpg",
+    "score": 67563
+  },
+  {
+    "id": "z5vgRYt_PJA",
+    "isNew": true,
+    "channelName": "john / TOOBOE",
+    "publishedAt": "2021-07-20T07:25:43.000Z",
+    "videoTitle": "【MV】麻痺 / TOOBOE",
+    "thumbnail": "https://i.ytimg.com/vi/z5vgRYt_PJA/maxresdefault.jpg",
+    "score": 67553
+  },
+  {
+    "id": "6OcsEGO-Ufs",
+    "isNew": true,
+    "channelName": "wotaku",
+    "publishedAt": "2021-07-20T09:48:05.000Z",
+    "videoTitle": "リテラシー(Literacy) / wotaku feat. 梓川(Azsagawa)",
+    "thumbnail": "https://i.ytimg.com/vi/6OcsEGO-Ufs/maxresdefault.jpg",
+    "score": 65658
+  },
+  {
+    "id": "X1tpi2MH-Co",
+    "isNew": true,
+    "channelName": "かんざきひろ / Kanzaki Hiro",
+    "publishedAt": "2021-07-21T05:15:15.000Z",
+    "videoTitle": "イラストメイキング　ラフ〜線画まで",
+    "thumbnail": "https://i.ytimg.com/vi/X1tpi2MH-Co/hqdefault.jpg",
+    "score": 63235
+  },
+  {
+    "id": "KhAcM0Nbtr8",
+    "isNew": true,
+    "channelName": "23.exe",
+    "publishedAt": "2021-07-22T18:08:31.000Z",
+    "videoTitle": "Clipping Radio - ft.Hatsune Miku",
+    "thumbnail": "https://i.ytimg.com/vi/KhAcM0Nbtr8/maxresdefault.jpg",
+    "score": 54006
+  },
+  {
+    "id": "gZXVw628JNQ",
+    "isNew": true,
+    "channelName": "復活の木村わいP",
+    "publishedAt": "2021-07-19T11:45:41.000Z",
+    "videoTitle": "【初音ミク】東京五輪開会ソング【国に優しいバージョン】",
+    "thumbnail": "https://i.ytimg.com/vi/gZXVw628JNQ/maxresdefault.jpg",
+    "score": 47900
+  },
+  {
+    "id": "Wa-eTGYouyw",
+    "isNew": true,
+    "channelName": "- Relu",
+    "publishedAt": "2021-07-18T08:17:46.000Z",
+    "videoTitle": "踊 - 歌ってみた / Relu",
+    "thumbnail": "https://i.ytimg.com/vi/Wa-eTGYouyw/hqdefault.jpg",
+    "score": 44454
+  },
+  {
+    "id": "KCu3C0XwsMk",
+    "isNew": true,
+    "channelName": "Guiano",
+    "publishedAt": "2021-07-23T10:59:31.000Z",
+    "videoTitle": "20210724 18:00",
+    "thumbnail": "https://i.ytimg.com/vi/KCu3C0XwsMk/hqdefault.jpg",
+    "score": 44298
+  },
+  {
+    "id": "qOcTzDQvC8Y",
+    "isNew": true,
+    "channelName": "きさら",
+    "publishedAt": "2021-07-22T05:18:56.000Z",
+    "videoTitle": "フロマギア -flomagia-  / flower",
+    "thumbnail": "https://i.ytimg.com/vi/qOcTzDQvC8Y/maxresdefault.jpg",
+    "score": 39065
+  },
+  {
+    "id": "6eqn3-iKN5M",
+    "isNew": true,
+    "channelName": "HatsuneMiku",
+    "publishedAt": "2021-07-19T06:27:06.000Z",
+    "videoTitle": "【初音ミク】アート展「初音ミク・クロニクル」/関係者インタビュー①",
+    "thumbnail": "https://i.ytimg.com/vi/6eqn3-iKN5M/hqdefault.jpg",
+    "score": 37226
+  },
+  {
+    "id": "9-GY-PU0IJk",
+    "isNew": true,
+    "channelName": "夏山よつぎ",
+    "publishedAt": "2021-07-19T07:36:58.000Z",
+    "videoTitle": "レメディ・レディ / 可不（Remedy Lady / KAFU）",
+    "thumbnail": "https://i.ytimg.com/vi/9-GY-PU0IJk/maxresdefault.jpg",
+    "score": 34874
+  },
+  {
+    "id": "QPbtlObnaFo",
+    "isNew": true,
+    "channelName": "一二三",
+    "publishedAt": "2021-07-21T12:58:03.000Z",
+    "videoTitle": "さよなら微炭酸がぁる／初音ミク - Acoustic ver.",
+    "thumbnail": "https://i.ytimg.com/vi/QPbtlObnaFo/hqdefault.jpg",
+    "score": 34415
+  },
+  {
+    "id": "_AKhSsixkR4",
+    "isNew": true,
+    "channelName": "OSTER projectテスロ&ロゼット",
+    "publishedAt": "2021-07-21T05:42:04.000Z",
+    "videoTitle": "【official MV】コンフェッション feat. 初音ミク",
+    "thumbnail": "https://i.ytimg.com/vi/_AKhSsixkR4/sddefault.jpg",
+    "score": 27548
+  },
+  {
+    "id": "1OSWx_IRsIo",
+    "isNew": true,
+    "channelName": "Osanzi",
+    "publishedAt": "2021-07-21T10:51:56.000Z",
+    "videoTitle": "Summer Love / Osanzi feat.初音ミク (2021 Mix)",
+    "thumbnail": "https://i.ytimg.com/vi/1OSWx_IRsIo/hqdefault.jpg",
+    "score": 26454
+  }
+]
+
+export const NEW_CHART_JUL_24: RawChart[] = [
+  {
+    "id": "Rcc_BreWEMI",
+    "isNew": true,
+    "channelName": "ポリスピカデリー / Police Piccadilly",
+    "publishedAt": "2021-07-17T16:36:41.000Z",
+    "videoTitle": "Beat Eater - ポリスピカデリー feat. 初音ミク / Police Piccadilly",
+    "thumbnail": "https://i.ytimg.com/vi/Rcc_BreWEMI/maxresdefault.jpg",
+    "score": 769341,
+    views: 284928
+  },
+  {
+    "id": "GXT88-9w2aI",
+    "isNew": true,
+    "channelName": "HatsuneMiku",
+    "publishedAt": "2021-07-19T05:15:00.000Z",
+    "videoTitle": "【HATSUNE MIKU Digital Stars 2021】 sweety glitch / gaburyu & nyankobrq feat. 初音ミク 【MV】",
+    "thumbnail": "https://i.ytimg.com/vi/GXT88-9w2aI/maxresdefault.jpg",
+    "score": 641451,
+    views: 102787
+  },
+  {
+    "id": "r2dc0wQbEtg",
+    "isNew": true,
+    "channelName": "SLAVE.V-V-R",
+    "publishedAt": "2021-07-24T01:00:12.000Z",
+    "videoTitle": "『どっくっん。』",
+    "thumbnail": "https://i.ytimg.com/vi/r2dc0wQbEtg/maxresdefault.jpg",
+    "score": 299513,
+    views: 46799
+  },
+  {
+    "id": "nW3Qh_ORfzk",
+    "isNew": true,
+    "channelName": "40meterP",
+    "publishedAt": "2021-07-17T13:33:43.000Z",
+    "videoTitle": "初音ミク＆GUMI「雨は二度上がる」MV",
+    "thumbnail": "https://i.ytimg.com/vi/nW3Qh_ORfzk/hqdefault.jpg",
+    "score": 90515,
+    views: 18257
+  },
+  {
+    "id": "y1K8OBOU5kM",
+    "isNew": true,
+    "channelName": "いよわ/ iyowa",
+    "publishedAt": "2021-07-22T18:24:14.000Z",
+    "videoTitle": "パインドロップ / いよわ×三月のパンタシア feat.初音ミク（Pinedrop / Iyowa × sangatsu no phantasia feat. Hatsune Miku）",
+    "thumbnail": "https://i.ytimg.com/vi/y1K8OBOU5kM/maxresdefault.jpg",
+    "score": 69765,
+    views: 10935
+  },
+  {
+    "id": "d3ZOnM1I17s",
+    "isNew": true,
+    "channelName": "wotaku",
+    "publishedAt": "2021-07-20T09:39:32.000Z",
+    "videoTitle": "リテラシー(Literacy) / wotaku feat. KAITO",
+    "thumbnail": "https://i.ytimg.com/vi/d3ZOnM1I17s/maxresdefault.jpg",
+    "score": 68559,
+    views: 10848
+  },
+  {
+    "id": "FCj3rAeDfL0",
+    "isNew": true,
+    "channelName": "ケダルイ / Kedarui",
+    "publishedAt": "2021-07-20T10:33:56.000Z",
+    "videoTitle": "ファムファタル / flower [Official]",
+    "thumbnail": "https://i.ytimg.com/vi/FCj3rAeDfL0/hqdefault.jpg",
+    "score": 67563,
+    views: 19055
+  },
+  {
+    "id": "KhAcM0Nbtr8",
+    "isNew": true,
+    "channelName": "23.exe",
+    "publishedAt": "2021-07-22T18:08:31.000Z",
+    "videoTitle": "Clipping Radio - ft.Hatsune Miku",
+    "thumbnail": "https://i.ytimg.com/vi/KhAcM0Nbtr8/maxresdefault.jpg",
+    "score": 54006,
+    views: 8465
+  },
+  {
+    "id": "qOcTzDQvC8Y",
+    "isNew": true,
+    "channelName": "きさら",
+    "publishedAt": "2021-07-22T05:18:56.000Z",
+    "videoTitle": "フロマギア -flomagia-  / flower",
+    "thumbnail": "https://i.ytimg.com/vi/qOcTzDQvC8Y/maxresdefault.jpg",
+    "score": 39065,
+    views: 6152
+  },
+  {
+    "id": "9-GY-PU0IJk",
+    "isNew": true,
+    "channelName": "夏山よつぎ",
+    "publishedAt": "2021-07-19T07:36:58.000Z",
+    "videoTitle": "レメディ・レディ / 可不（Remedy Lady / KAFU）",
+    "thumbnail": "https://i.ytimg.com/vi/9-GY-PU0IJk/maxresdefault.jpg",
+    "score": 34874,
+    views: 5571
+  },
+]
