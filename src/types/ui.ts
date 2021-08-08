@@ -23,10 +23,23 @@ export interface RawChartId {
 }
 
 export interface Chart extends Video {
-  lastWeek: number
-  bestPosition: number
-  weeksInChart: number
   isNew: boolean
+  score: number
+  views?: number
+}
+
+export interface ChartDetail {
+  isNew: boolean,
+  bestPosition: number,
+  currentPosition: number
+  weeksInChart: number
+  lastWeek: number
+  id: string
+  title: string
+  artist: string
+  uploadDate: Date
+  picture: string
+  voiceBank: string
   score: number
   views?: number
 }
@@ -34,4 +47,11 @@ export interface Chart extends Video {
 export interface Rank {
   rankProgress: "NEW" | number | string
   highestRank: number
+}
+
+export interface UpdateVideo {
+  id: string
+  title: string
+  artist: string
+  voiceBank: string
 }

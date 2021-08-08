@@ -6,8 +6,8 @@ import PrismaService from "../lib/services/prisma.service"
 import { chunk } from "../lib/helper/lodash-alt"
 import exportFromJSON from "export-from-json"
 import ChartHelper from "../lib/helper/chart"
-import { STATISTIC_WEEK_3 } from "../../database/statistic/statistic_week_3"
 import { NEW_JUL_17_CHART } from "../database/jul_17"
+import { STATISTIC_WEEK_5 } from "../../database/statistic/statistic_week_5"
 
 // TODO
 // Add IA official
@@ -67,12 +67,12 @@ export default function Home(props) {
       for (let index = 0; index < data.length; index++) {
         const element = data[index]
 
-        const obj = helper.chartMaker(element, STATISTIC_WEEK_3, element.video)
+        const obj = helper.chartMaker(element, STATISTIC_WEEK_5, element.video)
         array.push(obj)
       }
 
-      exportFromJSON({ data: array, fileName: "chart_jul_24", exportType: "csv" })
-      exportFromJSON({ data: array, fileName: "chart_jul_24", exportType: "json" })
+      exportFromJSON({ data: array, fileName: "chart_aug_7", exportType: "csv" })
+      exportFromJSON({ data: array, fileName: "chart_aug_7", exportType: "json" })
 
       return array
     } else {

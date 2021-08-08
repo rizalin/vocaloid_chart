@@ -1,19 +1,15 @@
-import { Box, Center, Container, Flex } from "@chakra-ui/react"
-import { Video } from "@prisma/client"
+import { Box, Container } from "@chakra-ui/react"
 import Head from "next/head"
 import { useEffect, useState } from "react"
-import { ALL_CHART_JUL_3 } from "../database/jul_3"
 import PrismaService from "../lib/services/prisma.service"
-import Image from "next/image"
-import { Chart } from "../types/ui"
+import { Chart, ChartDetail } from "../types/ui"
 import { ChartComponent } from "../components/chart-component"
-import { ALL_CHART_JUL_24 } from "../database/jul_24"
 
 // TODO
 // Add IA official
 
 export default function Home(props) {
-  const [videos, setVideos] = useState<Chart[]>([])
+  const [videos, setVideos] = useState<ChartDetail[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [videoLinks, setVideoLinks] = useState([])
 
@@ -21,37 +17,19 @@ export default function Home(props) {
 
   useEffect(() => {
     const getData = async () => {
-      const array: Chart[] = []
-      const links = []
+      const res = await prisma.getCurrentChart(6)
 
-      for (let index = 0; index < ALL_CHART_JUL_24.length; index++) {
-        const element = ALL_CHART_JUL_24[index]
-
-        const res = await prisma.getVideo(element.id)
-
+      if (res.isSuccess) {
         const data = res.getValue()
-
-        array.push({
-          ...data,
-          isNew: element.isNew,
-          bestPosition: element.bestPosition,
-          lastWeek: element.lastWeek,
-          weeksInChart: element.weeksInChart,
-          score: element.score ?? 0
-        })
-
-        // links.push(`https://www.youtube.com/watch?v=${data.videoYoutubeId}`)
+        setVideos(data)
+        console.log(data)
       }
 
-      setVideos(array)
-      setVideoLinks(links)
       setIsLoading(false)
     }
 
     getData()
   }, [])
-
-  console.log(videoLinks)
 
   return (
     <>
@@ -68,18 +46,18 @@ export default function Home(props) {
             <div className="home-chart__header__title">
               <h1>Vocaloid/UTAU/Synth Chart</h1>
               <h3>Original Edition</h3>
-              <h5>Per Jul 24, 2021</h5>
+              <h5>Per Aug 7, 2021</h5>
             </div>
             <div className="home-chart__header__week">
               <div className="home-chart__header__week__title">Week</div>
-              <div className="home-chart__header__week__number">4</div>
+              <div className="home-chart__header__week__number">1</div>
               <div className="home-chart__header__week__year">2021</div>
             </div>
           </div>
 
           <Box>
-            {videos.slice(10, 20).map((item, i) => (
-              <ChartComponent video={item} index={i} indexAdd={11} key={i} type="all" />
+            {videos.slice(0, 20).map((item, i) => (
+              <ChartComponent video={item} index={i} indexAdd={1} key={i} type="all" />
             ))}
           </Box>
         </Container>

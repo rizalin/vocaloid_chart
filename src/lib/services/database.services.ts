@@ -1,4 +1,4 @@
-import { User, Video, YoutubeChannel } from "@prisma/client"
+import { User, Video, Performance, WeekPerformance } from "@prisma/client"
 import { VocadbUser } from "../../types/vocadb"
 import { YoutubeVideoResponse } from "../../types/youtube-raw"
 import { fetcher } from "../helper/async"
@@ -41,6 +41,34 @@ export default class DatabaseService {
       await fetcher("/api/database/videos", {
         method: "POST",
         body: videos
+      })
+
+      return Result.ok()
+    } catch (error) {
+      console.log(error)
+      return Result.fail()
+    }
+  }
+
+  async initPerformance(performances: Performance[]) {
+    try {
+      await fetcher("/api/database/performance", {
+        method: "POST",
+        body: performances
+      })
+
+      return Result.ok()
+    } catch (error) {
+      console.log(error)
+      return Result.fail()
+    }
+  }
+
+  async initWeekPerformance(weekPerformances: WeekPerformance[]) {
+    try {
+      await fetcher("/api/database/week-performance", {
+        method: "POST",
+        body: weekPerformances
       })
 
       return Result.ok()

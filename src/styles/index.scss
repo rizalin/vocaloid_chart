@@ -9,11 +9,40 @@ body {
   padding: 40px 0;
   &__card {
     margin-bottom: 20px;
+
+    &__body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__index {
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+      border: solid 1px black;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 400px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+
+    &__info {
+      width: 40%;
+    }
   }
 }
 
 .home-chart {
-  background-color: #db8054;
+  background-color: #2C394B;
   padding: 40px 0;
   min-height: 100vh;
   $this: &;
@@ -46,7 +75,7 @@ body {
   }
 
   &__header {
-    background-color: #404040;
+    background-color: #082032;
     display: flex;
     margin-bottom: 30px;
 
@@ -111,7 +140,7 @@ body {
         padding: 15px;
         width: 100%;
         font-size: 22px;
-        background-color: #3e3e3e;
+        background-color: #334756;
         color: #db8054;
       }
     }
@@ -123,7 +152,7 @@ body {
 
     .rank-wrapper {
       width: 10%;
-      background-color: #c6362c;
+      background-color: #082032;
       color: white;
       display: flex;
       align-items: center;
@@ -169,7 +198,7 @@ body {
 
     .chart-info {
       width: 30%;
-      background-color: #c6362c;
+      background-color: #082032;
       display: flex;
       color: white;
 

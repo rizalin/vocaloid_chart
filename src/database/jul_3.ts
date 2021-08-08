@@ -2,248 +2,274 @@ import { RawChart } from "../types/ui"
 
 export const RAW_JUL_3_CHART: RawChart[] = [
   {
-    id: "dHXC_ahjtEE",
-    isNew: false,
-    channelName: "Chinozo",
-    publishedAt: "2020-04-12T14:29:07.000Z",
-    videoTitle: "グッバイ宣言 / FloweR",
-    thumbnail: "https://i.ytimg.com/vi/dHXC_ahjtEE/maxresdefault.jpg",
-    score: 1241905
+    "id": "dHXC_ahjtEE",
+    "isNew": false,
+    "channelName": "Chinozo",
+    "publishedAt": "2020-04-12T14:29:07.000Z",
+    "videoTitle": "グッバイ宣言 / FloweR",
+    "thumbnail": "https://i.ytimg.com/vi/dHXC_ahjtEE/maxresdefault.jpg",
+    "score": 1241583
   },
   {
-    id: "GvnM9tFL6aE",
-    isNew: false,
-    channelName: "Rishie-P",
-    publishedAt: "2021-01-02T10:17:57.000Z",
-    videoTitle: "【MIKU V4X SOLID】Kire Carry On 【Cover】",
-    thumbnail: "https://i.ytimg.com/vi/GvnM9tFL6aE/maxresdefault.jpg",
-    score: 1098049
+    "id": "GvnM9tFL6aE",
+    "isNew": false,
+    "channelName": "Rishie-P",
+    "publishedAt": "2021-01-02T10:17:57.000Z",
+    "videoTitle": "【MIKU V4X SOLID】Kire Carry On 【Cover】",
+    "thumbnail": "https://i.ytimg.com/vi/GvnM9tFL6aE/maxresdefault.jpg",
+    "score": 1096931
   },
   {
-    id: "e1xCOsgWG0M",
-    isNew: false,
-    channelName: "DECO*27",
-    publishedAt: "2021-03-08T09:18:27.000Z",
-    videoTitle: "DECO*27 - ヴァンパイア feat. 初音ミク",
-    thumbnail: "https://i.ytimg.com/vi/e1xCOsgWG0M/maxresdefault.jpg",
-    score: 1073582
+    "id": "e1xCOsgWG0M",
+    "isNew": false,
+    "channelName": "DECO*27",
+    "publishedAt": "2021-03-08T09:18:27.000Z",
+    "videoTitle": "DECO*27 - ヴァンパイア feat. 初音ミク",
+    "thumbnail": "https://i.ytimg.com/vi/e1xCOsgWG0M/maxresdefault.jpg",
+    "score": 1073429
   },
   {
-    id: "EJMf1NdrYjo",
-    isNew: false,
-    channelName: "DECO*27",
-    publishedAt: "2021-06-21T02:44:51.000Z",
-    videoTitle: "DECO*27 - おじゃま虫Ⅱ feat. 初音ミク",
-    thumbnail: "https://i.ytimg.com/vi/EJMf1NdrYjo/maxresdefault.jpg",
-    score: 659763
+    "id": "EJMf1NdrYjo",
+    "isNew": false,
+    "channelName": "DECO*27",
+    "publishedAt": "2021-06-21T02:44:51.000Z",
+    "videoTitle": "DECO*27 - おじゃま虫Ⅱ feat. 初音ミク",
+    "thumbnail": "https://i.ytimg.com/vi/EJMf1NdrYjo/maxresdefault.jpg",
+    "score": 659358
   },
   {
-    id: "cm-l2h6GB8Q",
-    isNew: false,
-    channelName: "Kanaria",
-    publishedAt: "2020-08-02T05:18:36.000Z",
-    videoTitle: "【GUMI】KING【Kanaria】",
-    thumbnail: "https://i.ytimg.com/vi/cm-l2h6GB8Q/maxresdefault.jpg",
-    score: 613758
+    "id": "cm-l2h6GB8Q",
+    "isNew": false,
+    "channelName": "Kanaria",
+    "publishedAt": "2020-08-02T05:18:36.000Z",
+    "videoTitle": "【GUMI】KING【Kanaria】",
+    "thumbnail": "https://i.ytimg.com/vi/cm-l2h6GB8Q/maxresdefault.jpg",
+    "score": 613636
   },
   {
-    id: "KQPpw3dzEks",
-    isNew: false,
-    channelName: "syudou",
-    publishedAt: "2021-05-25T12:24:39.000Z",
-    videoTitle: "【syudou】爆笑",
-    thumbnail: "https://i.ytimg.com/vi/KQPpw3dzEks/maxresdefault.jpg",
-    score: 543290
+    "id": "KQPpw3dzEks",
+    "isNew": false,
+    "channelName": "syudou",
+    "publishedAt": "2021-05-25T12:24:39.000Z",
+    "videoTitle": "【syudou】爆笑",
+    "thumbnail": "https://i.ytimg.com/vi/KQPpw3dzEks/maxresdefault.jpg",
+    "score": 543063
   },
   {
-    id: "SAUhtVBUHIA",
-    isNew: false,
-    channelName: "tamon official",
-    publishedAt: "2018-12-16T11:53:50.000Z",
-    videoTitle: "テネシティ / tamon feat.flower",
-    thumbnail: "https://i.ytimg.com/vi/SAUhtVBUHIA/maxresdefault.jpg",
-    score: 521595
+    "id": "SAUhtVBUHIA",
+    "isNew": false,
+    "channelName": "tamon",
+    "publishedAt": "2018-12-16T11:53:50.000Z",
+    "videoTitle": "テネシティ / tamon feat.flower",
+    "thumbnail": "https://i.ytimg.com/vi/SAUhtVBUHIA/maxresdefault.jpg",
+    "score": 521020
   },
   {
-    id: "NTrm_idbhUk",
-    isNew: false,
-    channelName: "Kikuo",
-    publishedAt: "2015-03-06T06:42:02.000Z",
-    videoTitle: "Kikuo - 愛して愛して愛して",
-    thumbnail: "https://i.ytimg.com/vi/NTrm_idbhUk/maxresdefault.jpg",
-    score: 474856
+    "id": "NTrm_idbhUk",
+    "isNew": false,
+    "channelName": "Kikuo",
+    "publishedAt": "2015-03-06T06:42:02.000Z",
+    "videoTitle": "Kikuo - 愛して愛して愛して",
+    "thumbnail": "https://i.ytimg.com/vi/NTrm_idbhUk/maxresdefault.jpg",
+    "score": 474410
   },
   {
-    id: "jZJoRFMiqNU",
-    isNew: false,
-    channelName: "メドミア",
-    publishedAt: "2020-12-22T06:11:50.000Z",
-    videoTitle: "寄るなガーネット - 初音ミク",
-    thumbnail: "https://i.ytimg.com/vi/jZJoRFMiqNU/maxresdefault.jpg",
-    score: 418818
+    "id": "jZJoRFMiqNU",
+    "isNew": false,
+    "channelName": "Meddmia",
+    "publishedAt": "2020-12-22T06:11:50.000Z",
+    "videoTitle": "寄るなガーネット - 初音ミク",
+    "thumbnail": "https://i.ytimg.com/vi/jZJoRFMiqNU/maxresdefault.jpg",
+    "score": 417923
   },
   {
-    id: "oFmup8lxUHw",
-    isNew: false,
-    channelName: "syudou",
-    publishedAt: "2021-02-19T13:21:56.000Z",
-    videoTitle: "【可不】キュートなカノジョ【syudou】",
-    thumbnail: "https://i.ytimg.com/vi/oFmup8lxUHw/maxresdefault.jpg",
-    score: 391624
+    "id": "oFmup8lxUHw",
+    "isNew": false,
+    "channelName": "syudou",
+    "publishedAt": "2021-02-19T13:21:56.000Z",
+    "videoTitle": "【可不】キュートなカノジョ【syudou】",
+    "thumbnail": "https://i.ytimg.com/vi/oFmup8lxUHw/maxresdefault.jpg",
+    "score": 391548
   },
   {
-    id: "HDqAMC43GWo",
-    isNew: false,
-    channelName: "フロクロ(Frog96)",
-    publishedAt: "2020-06-06T17:57:05.000Z",
-    videoTitle: "cycle",
-    thumbnail: "https://i.ytimg.com/vi/HDqAMC43GWo/maxresdefault.jpg",
-    score: 376070
+    "id": "HDqAMC43GWo",
+    "isNew": false,
+    "channelName": "フロクロ(Frog96)",
+    "publishedAt": "2020-06-06T17:57:05.000Z",
+    "videoTitle": "cycle",
+    "thumbnail": "https://i.ytimg.com/vi/HDqAMC43GWo/maxresdefault.jpg",
+    "score": 375828
   },
   {
-    id: "dBQg24mx45Y",
-    isNew: false,
-    channelName: "sasakure. UK",
-    publishedAt: "2021-06-19T02:22:51.000Z",
-    videoTitle: "『トンデモワンダーズ』feat.初音ミク (+KAITO)  / sasakure.‌UK",
-    thumbnail: "https://i.ytimg.com/vi/dBQg24mx45Y/maxresdefault.jpg",
-    score: 353826
+    "id": "dBQg24mx45Y",
+    "isNew": false,
+    "channelName": "sasakure. UK",
+    "publishedAt": "2021-06-19T02:22:51.000Z",
+    "videoTitle": "『トンデモワンダーズ』feat.初音ミク (+KAITO)  / sasakure.‌UK",
+    "thumbnail": "https://i.ytimg.com/vi/dBQg24mx45Y/maxresdefault.jpg",
+    "score": 353670
   },
   {
-    id: "v93_zK_XjpE",
-    isNew: false,
-    channelName: "Rishie-P",
-    publishedAt: "2021-02-03T16:39:27.000Z",
-    videoTitle: "【MIKU V4X SOLID】Hibana 【Cover】",
-    thumbnail: "https://i.ytimg.com/vi/v93_zK_XjpE/sddefault.jpg",
-    score: 310412
+    "id": "v93_zK_XjpE",
+    "isNew": false,
+    "channelName": "Rishie-P",
+    "publishedAt": "2021-02-03T16:39:27.000Z",
+    "videoTitle": "【MIKU V4X SOLID】Hibana 【Cover】",
+    "thumbnail": "https://i.ytimg.com/vi/v93_zK_XjpE/sddefault.jpg",
+    "score": 309576
   },
   {
-    id: "pLi2G36a-ZE",
-    isNew: false,
-    channelName: "メドミア",
-    publishedAt: "2021-04-25T08:04:01.000Z",
-    videoTitle: "抜け殻ネオンシティ - 初音ミク",
-    thumbnail: "https://i.ytimg.com/vi/pLi2G36a-ZE/maxresdefault.jpg",
-    score: 304150
+    "id": "pLi2G36a-ZE",
+    "isNew": false,
+    "channelName": "Meddmia",
+    "publishedAt": "2021-04-25T08:04:01.000Z",
+    "videoTitle": "抜け殻ネオンシティ - 初音ミク",
+    "thumbnail": "https://i.ytimg.com/vi/pLi2G36a-ZE/maxresdefault.jpg",
+    "score": 303885
   },
   {
-    id: "rtHi7P5tb_s",
-    isNew: false,
-    channelName: "カンザキイオリ",
-    publishedAt: "2021-06-20T10:12:13.000Z",
-    videoTitle: "不器用な男 / カンザキイオリ",
-    thumbnail: "https://i.ytimg.com/vi/rtHi7P5tb_s/maxresdefault.jpg",
-    score: 291460
+    "id": "rtHi7P5tb_s",
+    "isNew": false,
+    "channelName": "カンザキイオリ",
+    "publishedAt": "2021-06-20T10:12:13.000Z",
+    "videoTitle": "不器用な男 / カンザキイオリ",
+    "thumbnail": "https://i.ytimg.com/vi/rtHi7P5tb_s/maxresdefault.jpg",
+    "score": 291297
   },
   {
-    id: "kr9ifkvmC7E",
-    isNew: false,
-    channelName: "IDONO KAWAZU",
-    publishedAt: "2021-03-31T12:43:23.000Z",
-    videoTitle: "THIRD ALBUM「蛙の借り目」告知",
-    thumbnail: "https://i.ytimg.com/vi/kr9ifkvmC7E/maxresdefault.jpg",
-    score: 290916
+    "id": "kr9ifkvmC7E",
+    "isNew": false,
+    "channelName": "IDONO KAWAZU",
+    "publishedAt": "2021-03-31T12:43:23.000Z",
+    "videoTitle": "THIRD ALBUM「蛙の借り目」告知",
+    "thumbnail": "https://i.ytimg.com/vi/kr9ifkvmC7E/maxresdefault.jpg",
+    "score": 290776
   },
   {
-    id: "8GF3tfK08LU",
-    isNew: false,
-    channelName: "やなこ",
-    publishedAt: "2021-06-26T11:58:34.000Z",
-    videoTitle: "【オリジナル曲】ぬいぐるみペニス(MUSIC VIDEO)",
-    thumbnail: "https://i.ytimg.com/vi/8GF3tfK08LU/maxresdefault.jpg",
-    score: 287499
+    "id": "8GF3tfK08LU",
+    "isNew": false,
+    "channelName": "やなこ",
+    "publishedAt": "2021-06-26T11:58:34.000Z",
+    "videoTitle": "【オリジナル曲】ぬいぐるみペニス(MUSIC VIDEO)",
+    "thumbnail": "https://i.ytimg.com/vi/8GF3tfK08LU/maxresdefault.jpg",
+    "score": 284478
   },
   {
-    id: "EEbWRjavSVw",
-    isNew: false,
-    channelName: "Ayase / YOASOBI",
-    publishedAt: "2021-05-08T12:25:23.000Z",
-    videoTitle: "シネマ / 初音ミク",
-    thumbnail: "https://i.ytimg.com/vi/EEbWRjavSVw/maxresdefault.jpg",
-    score: 279377
+    "id": "EEbWRjavSVw",
+    "isNew": false,
+    "channelName": "Ayase",
+    "publishedAt": "2021-05-08T12:25:23.000Z",
+    "videoTitle": "シネマ / 初音ミク",
+    "thumbnail": "https://i.ytimg.com/vi/EEbWRjavSVw/maxresdefault.jpg",
+    "score": 279375
   },
   {
-    id: "DeKLpgzh-qQ",
-    isNew: false,
-    channelName: "稲葉曇",
-    publishedAt: "2018-02-27T12:58:14.000Z",
-    videoTitle: "稲葉曇『ロストアンブレラ』Vo. 歌愛ユキ",
-    thumbnail: "https://i.ytimg.com/vi/DeKLpgzh-qQ/hqdefault.jpg",
-    score: 269497
+    "id": "DeKLpgzh-qQ",
+    "isNew": false,
+    "channelName": "InabaKumori",
+    "publishedAt": "2018-02-27T12:58:14.000Z",
+    "videoTitle": "稲葉曇『ロストアンブレラ』Vo. 歌愛ユキ",
+    "thumbnail": "https://i.ytimg.com/vi/DeKLpgzh-qQ/hqdefault.jpg",
+    "score": 269414
   },
   {
-    id: "gzV3Y8e-Sz8",
-    isNew: false,
-    channelName: "¿?",
-    publishedAt: "2021-06-26T09:44:04.000Z",
-    videoTitle: "人間？",
-    thumbnail: "https://i.ytimg.com/vi/gzV3Y8e-Sz8/hqdefault.jpg",
-    score: 255360
+    "id": "gzV3Y8e-Sz8",
+    "isNew": false,
+    "channelName": "¿?",
+    "publishedAt": "2021-06-26T09:44:04.000Z",
+    "videoTitle": "人間？",
+    "thumbnail": "https://i.ytimg.com/vi/gzV3Y8e-Sz8/hqdefault.jpg",
+    "score": 255218
   },
   {
-    id: "LiYS214Qh5A",
-    isNew: false,
-    channelName: "煮ル果実",
-    publishedAt: "2021-06-17T08:04:39.000Z",
-    videoTitle: "∴flower『アイロニーナ』 - Ironina【Official】",
-    thumbnail: "https://i.ytimg.com/vi/LiYS214Qh5A/maxresdefault.jpg",
-    score: 252993
+    "id": "LiYS214Qh5A",
+    "isNew": false,
+    "channelName": "Niru Kajitsu",
+    "publishedAt": "2021-06-17T08:04:39.000Z",
+    "videoTitle": "∴flower『アイロニーナ』 - Ironina【Official】",
+    "thumbnail": "https://i.ytimg.com/vi/LiYS214Qh5A/maxresdefault.jpg",
+    "score": 252896
   },
   {
-    id: "9QLT1Aw_45s",
-    isNew: false,
-    channelName: "ツミキ",
-    publishedAt: "2021-06-03T13:02:09.000Z",
-    videoTitle: "フォニイ / phony - kafu [オリジナル]",
-    thumbnail: "https://i.ytimg.com/vi/9QLT1Aw_45s/maxresdefault.jpg",
-    score: 250524
+    "id": "9QLT1Aw_45s",
+    "isNew": false,
+    "channelName": "tsumiki",
+    "publishedAt": "2021-06-03T13:02:09.000Z",
+    "videoTitle": "フォニイ / phony - kafu [オリジナル]",
+    "thumbnail": "https://i.ytimg.com/vi/9QLT1Aw_45s/maxresdefault.jpg",
+    "score": 250208
   },
   {
-    id: "G5hScSFkib4",
-    isNew: false,
-    channelName: "稲葉曇",
-    publishedAt: "2021-06-23T06:49:25.000Z",
-    videoTitle: "稲葉曇『レイニーブーツ』Vo. 歌愛ユキ",
-    thumbnail: "https://i.ytimg.com/vi/G5hScSFkib4/maxresdefault.jpg",
-    score: 245731
+    "id": "G5hScSFkib4",
+    "isNew": false,
+    "channelName": "InabaKumori",
+    "publishedAt": "2021-06-23T06:49:25.000Z",
+    "videoTitle": "稲葉曇『レイニーブーツ』Vo. 歌愛ユキ",
+    "thumbnail": "https://i.ytimg.com/vi/G5hScSFkib4/maxresdefault.jpg",
+    "score": 245544
   },
   {
-    id: "eTlMa0tdv0c",
-    isNew: true,
-    channelName: "すりぃOFFICIAL",
-    publishedAt: "2021-07-02T11:00:16.000Z",
-    videoTitle: "ヘビリンゴ / すりぃ feat.ねね",
-    thumbnail: "https://i.ytimg.com/vi/eTlMa0tdv0c/maxresdefault.jpg",
-    score: 245372
+    "id": "eTlMa0tdv0c",
+    "isNew": true,
+    "channelName": "すりぃOFFICIAL",
+    "publishedAt": "2021-07-02T11:00:16.000Z",
+    "videoTitle": "ヘビリンゴ / すりぃ feat.ねね",
+    "thumbnail": "https://i.ytimg.com/vi/eTlMa0tdv0c/maxresdefault.jpg",
+    "score": 245030
   },
   {
-    id: "ohbSbLRJFeE",
-    isNew: false,
-    channelName: "HatsuneMiku",
-    publishedAt: "2021-06-26T07:01:09.000Z",
-    videoTitle:
-      "【Digital Stars feat. MIKU & GUMI】 Unsung Melodies / monaca:factory feat. Hatsune Miku & GUMI",
-    thumbnail: "https://i.ytimg.com/vi/ohbSbLRJFeE/maxresdefault.jpg",
-    score: 234835
+    "id": "ohbSbLRJFeE",
+    "isNew": false,
+    "channelName": "monaca:factory",
+    "publishedAt": "2021-06-26T07:01:09.000Z",
+    "videoTitle": "【Digital Stars feat. MIKU & GUMI】 Unsung Melodies / monaca:factory feat. Hatsune Miku & GUMI",
+    "thumbnail": "https://i.ytimg.com/vi/ohbSbLRJFeE/maxresdefault.jpg",
+    "score": 234619
   },
   {
-    id: "BYijMVn15YQ",
-    isNew: false,
-    channelName: "レシオP",
-    publishedAt: "2021-06-27T03:02:57.000Z",
-    videoTitle: "🔴ライブ配信 (032)「BEST HIT CHRONICLE カップヌードル 1/1」",
-    thumbnail: "https://i.ytimg.com/vi/BYijMVn15YQ/maxresdefault.jpg",
-    score: 226848
+    "id": "BYijMVn15YQ",
+    "isNew": false,
+    "channelName": "レシオP",
+    "publishedAt": "2021-06-27T03:02:57.000Z",
+    "videoTitle": "🔴ライブ配信 (032)「BEST HIT CHRONICLE カップヌードル 1/1」",
+    "thumbnail": "https://i.ytimg.com/vi/BYijMVn15YQ/maxresdefault.jpg",
+    "score": 226464
   },
   {
-    id: "Z8U9pO-6r-w",
-    isNew: true,
-    channelName: "Peg",
-    publishedAt: "2021-06-25T02:19:22.000Z",
-    videoTitle: "邪道/可不　MV",
-    thumbnail: "https://i.ytimg.com/vi/Z8U9pO-6r-w/maxresdefault.jpg",
-    score: 225301
+    "id": "Z8U9pO-6r-w",
+    "isNew": true,
+    "channelName": "Peg",
+    "publishedAt": "2021-06-25T02:19:22.000Z",
+    "videoTitle": "邪道/可不　MV",
+    "thumbnail": "https://i.ytimg.com/vi/Z8U9pO-6r-w/maxresdefault.jpg",
+    "score": 225097
+  },
+  {
+    "id": "U5PPdCZSMaw",
+    "isNew": true,
+    "channelName": "Kasamura Tota",
+    "publishedAt": "2021-07-02T11:00:17.000Z",
+    "videoTitle": "花めづる君　/  feat. GUMI",
+    "thumbnail": "https://i.ytimg.com/vi/U5PPdCZSMaw/maxresdefault.jpg",
+    "score": 224288
+  },
+  {
+    "id": "UnIhRpIT7nc",
+    "isNew": false,
+    "channelName": "InabaKumori",
+    "publishedAt": "2020-07-16T09:42:25.000Z",
+    "videoTitle": "稲葉曇『ラグトレイン』Vo. 歌愛ユキ",
+    "thumbnail": "https://i.ytimg.com/vi/UnIhRpIT7nc/maxresdefault.jpg",
+    "score": 223090
+  },
+  {
+    "id": "--41OGPMurU",
+    "isNew": false,
+    "channelName": "ピノキオピー PINOCCHIOP OFFICIAL CHANNEL",
+    "publishedAt": "2020-10-14T13:13:04.000Z",
+    "videoTitle": "ピノキオピー - ラヴィット feat. 初音ミク / Loveit",
+    "thumbnail": "https://i.ytimg.com/vi/--41OGPMurU/maxresdefault.jpg",
+    "score": 222948
   }
 ]
 

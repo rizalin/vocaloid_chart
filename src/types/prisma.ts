@@ -1,4 +1,5 @@
 import { YoutubeLinkType } from "@prisma/client"
+import { Chart, RawChart } from "./ui"
 
 export interface UserRequestBody {
   artistType: string
@@ -15,4 +16,12 @@ export interface ChannelRequestBody {
   userId: number
   channelName: string
   createdAt: Date
+}
+
+export interface ChartRequestBody {
+  data: Chart
+  month: string
+  week: number
+  position: number
+  isKafu?: boolean
 }

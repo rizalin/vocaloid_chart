@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react"
 import { RAW_NEW_CHART_JUL_24 } from "../database/jul_24"
 import PrismaService from "../lib/services/prisma.service"
 import { RawChart } from "../types/ui"
+import { RAW_JUL_30_CHART } from "../database/jul_30"
 
 const DataChecking = (props) => {
   const [videos, setVideos] = useState<RawChart[]>([])
@@ -13,11 +14,11 @@ const DataChecking = (props) => {
   const prisma = new PrismaService()
 
   useEffect(() => {
-    setVideos(RAW_NEW_CHART_JUL_24)
+    setVideos(RAW_JUL_30_CHART)
   }, [])
 
   const convertToJson = () => {
-    exportFromJSON({ data: videos, fileName: "all_chart_jul_3", exportType: "json" })
+    exportFromJSON({ data: videos, fileName: "all_chart_jul_30", exportType: "json" })
   }
 
   const removeVideo = (index: number, id: string) => async () => {

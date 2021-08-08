@@ -30,7 +30,7 @@ export default class YoutubeHelper {
 
     const searchParams = new URLSearchParams(params)
 
-    return await got(`${process.env.YOUTUBE_API_URL}/channels`, {
+    return got(`${process.env.YOUTUBE_API_URL}/channels`, {
       searchParams,
       responseType: "json"
     })

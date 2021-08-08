@@ -67,6 +67,7 @@ model Video {
   voiceBank String?
   statistic Statistic[]
   performance Performance?
+  kafu KAFUPerformance?
   createdAt DateTime? @default(now())
   deletedAt DateTime? 
 }
@@ -83,12 +84,21 @@ model Statistic {
   id String @id @default(cuid())
   video Video? @relation(fields: [videoId], references: [id])
   videoId String?
+  statistics WeekStatistic[]
+  createdAt DateTime? @default(now())
+  deletedAt DateTime?
+}
+
+model WeekStatistic {
+  id String @id @default(cuid())
+  video Statistic? @relation(fields: [statisticId], references: [id])
+  statisticId String
   week Int
   views Int
   comments Int
   likes Int
   createdAt DateTime? @default(now())
-  deletedAt DateTime? 
+  deletedAt DateTime?
 }
 
 model Performance {
@@ -102,6 +112,17 @@ model Performance {
   deletedAt DateTime? 
 }
 
+model KAFUPerformance {
+  id String @id @default(cuid())
+  bestPosition Int
+  weeksInChart Int
+  video Video @relation(fields: [videoId], references: [id])
+  weekPerformances KAFUWeekPerformance[]
+  videoId String
+  createdAt DateTime? @default(now())
+  deletedAt DateTime?
+}
+
 model WeekPerformance {
   id String @id @default(cuid())
   performance Performance @relation(fields: [performanceId], references: [id])
@@ -109,11 +130,27 @@ model WeekPerformance {
   week Int
   month String
   score Int
-  viewModifier Decimal
-  viewPoint Int
-  likeModifier Decimal
-  likePoint Int
-  commentModifier Decimal
+  position Int
+  viewModifier Decimal?
+  viewPoint Int?
+  likeModifier Decimal?
+  likePoint Int?
+  commentModifier Decimal?
+}
+
+model KAFUWeekPerformance {
+  id String @id @default(cuid())
+  performance KAFUPerformance @relation(fields: [performanceId], references: [id])
+  performanceId String
+  week Int
+  month String
+  score Int
+  position Int
+  viewModifier Decimal?
+  viewPoint Int?
+  likeModifier Decimal?
+  likePoint Int?
+  commentModifier Decimal?
 }
 
 model SpotifyLink {

@@ -1,17 +1,17 @@
 import { ArrowDownIcon, ArrowUpIcon } from "@chakra-ui/icons"
 import dayjs from "dayjs"
 import { FC } from "react"
-import { Chart, Rank } from "../types/ui"
+import { Chart, ChartDetail, Rank } from "../types/ui"
 
 export interface RankCalculatorProps {
   index: number
   indexAdd: number
-  video: Chart
+  video: ChartDetail
 }
 
 function rankCalculator({ index, indexAdd, video }: RankCalculatorProps): Rank {
   const currentRank = index + indexAdd
-  const { isNew, bestPosition, lastWeek } = video
+  const { isNew, bestPosition, lastWeek, weeksInChart } = video
   const progress = lastWeek - currentRank
 
   switch (true) {
@@ -20,15 +20,15 @@ function rankCalculator({ index, indexAdd, video }: RankCalculatorProps): Rank {
         rankProgress: "NEW",
         highestRank: currentRank
       }
-    case lastWeek > 20 && bestPosition > 1:
-      return {
-        rankProgress: "RE-ENTRY",
-        highestRank: bestPosition
-      }
-    case lastWeek > 20:
+    case weeksInChart < 2 && lastWeek === 0:
       return {
         rankProgress: "CHART DEBUT",
         highestRank: currentRank
+      }
+    case weeksInChart > 1 && lastWeek === 0:
+      return {
+        rankProgress: "RE-ENTRY",
+        highestRank: bestPosition
       }
     case bestPosition > 0:
       return {
@@ -76,7 +76,7 @@ function ProgressIndicator({ rankProgress }) {
 }
 
 interface ChartComponentProps {
-  video: Chart
+  video: ChartDetail
   index: number
   indexAdd: number
   type?: "new" | "all"
@@ -100,7 +100,7 @@ export const ChartComponent: FC<ChartComponentProps> = ({
         <div className="overlay-info">
           <div className="info">
             <div className="title">{video.title}</div>
-            <div className="artist">{video.customArtist}</div>
+            <div className="artist">{video.artist ?? video.customArtist}</div>
             <div className="composer">Voice Bank: {video.voiceBank}</div>
           </div>
         </div>
@@ -110,7 +110,11 @@ export const ChartComponent: FC<ChartComponentProps> = ({
           <ProgressIndicator rankProgress={rankProgress} />
         </div>
         <div className="chart-progress">
-          {isKafu ? "" : <div className="info">Score : {Intl.NumberFormat("en-EN").format(video.score)}</div>}
+          {isKafu ? (
+            ""
+          ) : (
+            <div className="info">Score : {Intl.NumberFormat("en-EN").format(video.score)}</div>
+          )}
           {type === "all" ? (
             <div className="info">Weeks in chart : {video.weeksInChart ?? 1}</div>
           ) : (

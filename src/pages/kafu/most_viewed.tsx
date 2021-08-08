@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import PrismaService from "../../lib/services/prisma.service"
 import { Chart } from "../../types/ui"
 import { ChartComponent } from "../../components/chart-component"
-import { KAFU_JUL_21 } from "../../database/kafu/july_21"
+import { KAFU_AUG_7 } from "../../database/kafu/aug_7"
 
 // TODO
 // Add IA official
@@ -20,8 +20,8 @@ export default function Home(props) {
       const array: Chart[] = []
       const links = []
 
-      for (let index = KAFU_JUL_21.length - 1; index >= 0; index--) {
-        const element = KAFU_JUL_21[index]
+      for (let index = KAFU_AUG_7.length - 1; index >= 0; index--) {
+        const element = KAFU_AUG_7[index]
 
         const res = await prisma.getVideo(element.id)
         if (res.isSuccess) {
@@ -33,7 +33,7 @@ export default function Home(props) {
               ...data,
               isNew: element.isNew,
               bestPosition: index,
-              lastWeek: element.lastWeek ?? KAFU_JUL_21.length - index,
+              lastWeek: element.lastWeek ?? KAFU_AUG_7.length - index,
               weeksInChart: 1,
               score: 0,
               views: element.views
@@ -64,18 +64,18 @@ export default function Home(props) {
             <div className="home-chart__header__title">
               <h1>KAFU Chart</h1>
               <h3>Most Viewed Edition</h3>
-              <h5>Per Jul 21, 2021</h5>
+              <h5>Per August 7, 2021</h5>
             </div>
             <div className="home-chart__header__week">
               <div className="home-chart__header__week__title">Week</div>
-              <div className="home-chart__header__week__number">4</div>
+              <div className="home-chart__header__week__number">6</div>
               <div className="home-chart__header__week__year">2021</div>
             </div>
           </div>
 
           <Box>
-            {videos.slice(10, 20).map((item, i) => (
-              <ChartComponent video={item} index={i} indexAdd={11} key={i} type="new" isKafu />
+            {videos.slice(0, 10).map((item, i) => (
+              <ChartComponent video={item} index={i} indexAdd={1} key={i} type="new" isKafu />
             ))}
           </Box>
         </Container>

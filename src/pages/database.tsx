@@ -2,19 +2,21 @@ import Head from "next/head"
 import { Button, Container } from "@chakra-ui/react"
 import { chunk } from "../lib/helper/lodash-alt"
 import DatabaseService from "../lib/services/database.services"
-import { user } from "../../database/user"
+import { user_v2 } from "../../database/user_v2"
 import { User, Video, YoutubeChannel } from "@prisma/client"
 import { channels } from "../../database/channels"
-import { videos } from "../../database/videos"
+import { video_v2 } from "../../database/video_v2"
+import { performances } from "../../database/performance"
+import { weekPerformances } from "../../database/weekPerformances"
 
 // TODO
 // Add IA official
 
-export default function Home(props) {
+export default function Home() {
   const database = new DatabaseService()
 
   const generateUser = async () => {
-    const users: User[] = user.map((item) => {
+    const users: User[] = user_v2.map((item) => {
       return {
         ...item,
         isActive: item.isActive === 1,
@@ -50,7 +52,7 @@ export default function Home(props) {
   }
 
   const generateVideo = async () => {
-    const vds: Video[] = videos.map((item) => {
+    const vds: Video[] = video_v2.map((item) => {
       return {
         ...item,
         createdAt: new Date(item.createdAt),
@@ -64,6 +66,30 @@ export default function Home(props) {
 
     for (const c of chunked) {
       await database.initVideos(c)
+    }
+  }
+
+  const generatePerformance = async () => {
+    const vds = performances.map((item) => {
+      return {
+        ...item,
+        createdAt: new Date(item.createdAt),
+        deletedAt: null,
+      }
+    })
+
+    const chunked = chunk(vds, 1000)
+
+    for (const c of chunked) {
+      await database.initPerformance(c)
+    }
+  }
+
+  const generateWeekPerformance = async () => {
+    const chunked = chunk(weekPerformances, 1000)
+
+    for (const c of chunked) {
+      await database.initWeekPerformance(c)
     }
   }
 
@@ -84,6 +110,12 @@ export default function Home(props) {
         </Button>
         <Button colorScheme="teal" onClick={generateVideo}>
           Generate Video
+        </Button>
+        <Button colorScheme="teal" onClick={generatePerformance}>
+          Generate Performance
+        </Button>
+        <Button colorScheme="teal" onClick={generateWeekPerformance}>
+          Generate Week Performance
         </Button>
       </Container>
 
