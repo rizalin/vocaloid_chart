@@ -47,7 +47,7 @@ model YoutubeChannel {
   youtubeLink String @unique
   userId Int
   videos Video[]
-  included Boolean @default(false)
+  type YoutubeChannelStatus @default(NOT_REVIEWED_YET)
   createdAt DateTime? @default(now())
   insertAt DateTime? @default(now())
   deletedAt DateTime? 
@@ -179,4 +179,11 @@ model NndLink {
 enum YoutubeLinkType {
   CUSTOM_LINK
   ORIGINAL_ID
+}
+
+enum YoutubeChannelStatus {
+    INCLUDED
+    NOT_VOCALOID
+    TOO_SMALL
+    NOT_REVIEWED_YET
 }

@@ -1,0 +1,13 @@
+.custom_button{
+  position: relative !important;
+
+  &--loading {
+    .chakra-spinner {
+      position: absolute;
+    }
+
+    span {
+      color: transparent;
+    }
+  }
+}

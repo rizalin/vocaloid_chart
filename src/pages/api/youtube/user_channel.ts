@@ -1,9 +1,9 @@
 import { YoutubeLinkType } from "@prisma/client"
 import { NextApiRequest, NextApiResponse } from "next"
-import YoutubeHelper from "../../../lib/api/raw/youtube"
 import { YoutubeChannelRaw, YoutubeResponseRaw } from "../../../types/youtube-raw"
+import YoutubeRepo from "../../../lib/repo/youtube.repo"
 
-const youtube = new YoutubeHelper()
+const youtube = new YoutubeRepo()
 
 export default async function index(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "POST") {

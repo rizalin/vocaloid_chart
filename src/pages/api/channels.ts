@@ -6,7 +6,7 @@ const prisma = new PrismaClient()
 export default async function index(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
-      const response = await prisma.youtubeChannel.findMany({ where: { included: true } })
+      const response = await prisma.youtubeChannel.findMany({ where: { type: "INCLUDED" } })
 
       res.status(200).json({ data: response })
     } catch (error) {

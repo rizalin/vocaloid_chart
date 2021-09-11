@@ -1,0 +1,66 @@
+@import "mixin";
+
+
+.home {
+  &__banner {
+    height: 400px;
+    position: relative;
+
+    img {
+      object-fit: cover;
+      @include fill-size;
+    }
+
+    &__overlay {
+      @include overlay-container;
+      background-color: rgba(black, 35%);
+
+      h1 {
+        color: white;
+        font-size: 30px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__links {
+    h3 {
+      font-size: 25px;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    &__capsule {
+      width: 23%;
+      height: 80px;
+      border-radius: 10px;
+      position: relative;
+
+      img {
+        border-radius: 10px;
+        @include fill-size;;
+        object-fit: cover;
+      }
+
+      &__overlay {
+        @include overlay-container;
+        color: #A7D7D9;
+        font-size: 18px;
+        font-weight: 500;
+
+        &:hover {
+          background-color: rgba(white, 30%);
+          color: #0F044C;
+        }
+
+      }
+
+    }
+  }
+}

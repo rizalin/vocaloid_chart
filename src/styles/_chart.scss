@@ -1,0 +1,230 @@
+.raw_chart {
+  padding: 40px 0;
+  &__card {
+    margin-bottom: 20px;
+
+    &__body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__index {
+      height: 50px;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+      border: solid 1px black;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 400px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+
+    &__info {
+      width: 40%;
+    }
+  }
+}
+
+.home_chart {
+  background-color: #2C394B;
+  padding: 40px 0;
+  min-height: 100vh;
+  $this: &;
+
+  &--kafu {
+    background-color: #dedeea;
+
+    #{$this}__header {
+      background: white;
+
+      &__title {
+        h1,
+        h3,
+        h5 {
+          color: #191828;
+        }
+      }
+
+      &__week {
+        background-color: #1a1b2f;
+
+        color: #8d8d52;
+
+        &__year {
+          background-color: #0000ea;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__header {
+    background-color: #082032;
+    display: flex;
+    margin-bottom: 30px;
+
+    img {
+      width: 20%;
+      object-fit: cover;
+    }
+
+    &__title {
+      width: 60%;
+      text-align: center;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h1,
+      h3,
+      h5 {
+        color: #c0c0c0;
+      }
+
+      h1 {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      h3 {
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+      h5 {
+        font-size: 20px;
+      }
+    }
+
+    &__week {
+      background-color: #c0c0c0;
+      padding: 20px;
+      width: 20%;
+      text-align: center;
+      position: relative;
+
+      &__title {
+        font-weight: 600;
+        font-size: 24px;
+      }
+
+      &__number {
+        font-weight: 600;
+        font-size: 50px;
+      }
+
+      &__year {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        font-weight: 600;
+        padding: 15px;
+        width: 100%;
+        font-size: 22px;
+        background-color: #334756;
+        color: #db8054;
+      }
+    }
+  }
+
+  .entry-wrapper {
+    margin-bottom: 30px;
+    display: flex;
+
+    .rank-wrapper {
+      width: 10%;
+      background-color: #082032;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5vw;
+    }
+
+    .video-info {
+      width: 60%;
+      position: relative;
+
+      img {
+        height: 14vw;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .overlay-info {
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        background-color: rgba(64, 64, 69, 0.7);
+        color: white;
+        width: 100%;
+        height: 100%;
+        padding: 1.5vw;
+        display: flex;
+        justify-content: space-between;
+
+        .info {
+          .title {
+            font-size: 2.8vw;
+            margin-bottom: 10px;
+          }
+
+          .artist,
+          .composer {
+            font-size: 1.7vw;
+          }
+        }
+      }
+    }
+
+    .chart-info {
+      width: 30%;
+      background-color: #082032;
+      display: flex;
+      color: white;
+
+      .progress-column {
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2vw;
+        font-weight: 500;
+
+        .rank-progress {
+          text-align: center;
+          font-weight: 500;
+        }
+      }
+
+      .chart-progress {
+        padding: 10px;
+        border-left: solid 1px white;
+        font-size: 1.5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    &--kafu {
+      .rank-wrapper,
+      .chart-info {
+        background-color: #0000ea;
+      }
+    }
+  }
+}

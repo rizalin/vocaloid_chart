@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client"
 import { NextApiRequest, NextApiResponse } from "next"
-import { UpdateVideo } from "../../../types/ui"
+import { UpdateVideo } from "../../../types/chart"
 
 const prisma = new PrismaClient()
 
@@ -28,7 +28,9 @@ export default async function index(req: NextApiRequest, res: NextApiResponse) {
         const response = await prisma.video.update({
           where: { videoYoutubeId: id as string },
           data: {
-            title, customArtist: artist, voiceBank
+            title,
+            customArtist: artist,
+            voiceBank
           }
         })
         res.status(200).json({ data: response })
