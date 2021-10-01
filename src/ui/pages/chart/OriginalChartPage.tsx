@@ -8,7 +8,7 @@ import { ChartComponent } from "./ChartComponent"
 
 const OriginalChartPage = () => {
   const [videos, setVideos] = useState<ChartDetail[]>([])
-  const [currentWeek, setCurrentWeek] = useState(12)
+  const [currentWeek, setCurrentWeek] = useState(13)
   const [shownVideos, setShownVideos] = useState<ChartDetail[]>([])
   const [isLoading, setIsLoading] = useState(true)
 
@@ -60,7 +60,7 @@ const OriginalChartPage = () => {
             <div className="home_chart__header__title">
               <h1>Vocaloid/UTAU/Synth Chart</h1>
               <h3>Original Edition</h3>
-              <h5>Per September 18, 2021</h5>
+              <h5>Per September 25, 2021</h5>
             </div>
             <div className="home_chart__header__week">
               <div className="home_chart__header__week__title">Week</div>
