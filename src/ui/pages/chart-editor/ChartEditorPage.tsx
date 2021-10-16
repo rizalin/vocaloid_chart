@@ -17,7 +17,7 @@ import exportFromJSON from "export-from-json"
 import { Chart } from "../../../types/chart"
 import CommonService from "../../../lib/services/common_service"
 import ChartService from "../../../lib/services/chart_service"
-import { RAW_CHART_SEPT_25 } from "../../../../database/sept_25"
+import { RAW_CHART_OCT_9 } from "../../../../database/oct_9"
 
 const DataChecking = () => {
   const [videos, setVideos] = useState<Chart[]>([])
@@ -34,8 +34,8 @@ const DataChecking = () => {
   useEffect(() => {
     const getData = async () => {
       const array: Chart[] = []
-      for (let index = 0; index < RAW_CHART_SEPT_25.length; index++) {
-        const element = RAW_CHART_SEPT_25[index]
+      for (let index = 0; index < RAW_CHART_OCT_9.length; index++) {
+        const element = RAW_CHART_OCT_9[index]
 
         const res = await common.getVideo(element.id)
 
@@ -83,8 +83,8 @@ const DataChecking = () => {
       await chart.initChart(element.videoYoutubeId, {
         position: i + 1,
         data: element,
-        month: "September 2021",
-        week: 13
+        month: "October 2021",
+        week: 15
       })
     }
   }

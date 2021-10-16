@@ -328,7 +328,7 @@ export default class ChartService {
           charts.push({
             id: video.videoYoutubeId,
             artist: video.customArtist,
-            isNew: !(now.diff(uploadMoment, "days") > 6),
+            isNew: !(now.diff(uploadMoment, "days") > 8),
             weeksInChart: element.weeksInChart,
             score: currentPerformance.score,
             currentPosition: currentPerformance.position,

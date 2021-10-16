@@ -41,7 +41,6 @@ export default class InitService extends CommonService {
 
       return Result.ok()
     } catch (error) {
-      console.log(error)
       return Result.fail()
     }
   }
